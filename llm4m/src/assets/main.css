@@ -1,0 +1,100 @@
+/* Import base styles and fonts */
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+/* Root and Variable Definitions */
+:root {
+    --primary-color: hsla(199, 100%, 37%, 1);
+    --primary-color-light: hsla(211, 100%, 37%, 0.2);
+    --background-color-light: #f5f5f5; /* For light theme */
+    --text-color-light: #333; /* For light theme */
+    --background-color-dark: #333; /* For dark theme */
+    --text-color-dark: #f5f5f5; /* For dark theme */
+    --max-content-width: 1280px;
+    --transition-speed: 0.4s;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+#app {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Style adjustments for links and interactive elements */
+a, .green, button {
+    color: var(--primary-color);
+    transition: background-color var(--transition-speed);
+}
+
+a:hover, .green:hover {
+    background-color: var(--primary-color-light);
+}
+
+button {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: hsla(161, 100%, 27%, 1); /* Darker shade for hover */
+}
+
+/* Form element styling */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Responsive and Utility Styles */
+@media (min-width: 1024px) {
+    #app {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid var(--primary-color-light);
+    outline-offset: 2px;
+}
