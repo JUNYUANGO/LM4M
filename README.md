@@ -1,4 +1,4 @@
-# Language Model for Music (LM4M)
+# Duo Music Recommendation System
 
 [TODO] Add a brief description of the project here.
 

@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <h1>Large Language Model for Music Recommendation - LLM4M</h1>
+    <h1>Duo Music Recommendation System</h1>
     <button @click="$emit('toggleTheme')" class="theme-toggle-btn">
       <span class="material-symbols-outlined">
         {{ theme === 'light' ? 'dark_mode' : 'light_mode' }}
@@ -17,6 +17,19 @@ export default {
 </script>
 
 <style>
+h1 {
+  font-size: 36px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: 12px;
+  width: 100%;
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0,
   'wght' 400,
@@ -39,6 +52,7 @@ export default {
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   outline: none;
+  margin: 10px;
 }
 
 .theme-toggle-btn:hover {

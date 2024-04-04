@@ -1,15 +1,21 @@
 <template>
   <div class="results-section">
-    <ul v-if="songs && songs.length">
-      <li v-for="(song, index) in songs" :key="index">{{ song }}</li>
-    </ul>
-    <p v-else>No songs found.</p>
+    <SongCard
+        v-for="(song, index) in songs"
+        :key="index"
+        :song="song"
+    />
   </div>
 </template>
 
 <script>
+import SongCard from './SongCard.vue'; // Ensure the path is correct
+
 export default {
   name: 'DisplayResults',
+  components: {
+    SongCard
+  },
   props: ['songs']
 };
 </script>

@@ -36,7 +36,7 @@ body.dark {
 #app {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* Style adjustments for links and interactive elements */
@@ -45,9 +45,9 @@ a, .green, button {
     transition: background-color var(--transition-speed);
 }
 
-a:hover, .green:hover {
-    background-color: var(--primary-color-light);
-}
+/*a:hover, .green:hover {*/
+/*    background-color: var(--primary-color-light);*/
+/*}*/
 
 button {
     background-color: var(--primary-color);
@@ -75,9 +75,6 @@ input[type="text"], textarea {
 /* Responsive and Utility Styles */
 @media (min-width: 1024px) {
     #app {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
     }
 }
 
